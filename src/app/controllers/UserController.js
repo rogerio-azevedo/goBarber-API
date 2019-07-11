@@ -2,7 +2,9 @@ import User from '../models/User';
 
 class UserController {
   async index(req, res) {
-    const list = await User.findAll();
+    const list = await User.findAll({
+      attributes: ['name', 'email', 'provider'],
+    });
 
     return res.json(list);
   }
