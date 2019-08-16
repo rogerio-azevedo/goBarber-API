@@ -19,8 +19,8 @@ routes.post('/users', UserController.store);
 
 routes.use(authMiddleware);
 
-routes.put('/users/update', UserController.update);
-routes.get('/users/index', UserController.index);
+routes.put('/users', UserController.update);
+routes.get('/users', UserController.index);
 routes.get('/providers', ProviderController.index);
 routes.get('/providers/:providerId/available', AvailabreControler.index);
 
